@@ -5,16 +5,16 @@ describe 'NumberMultiplierPrime' do
 
   let(:multiplier) { NumberMultiplierPrime.new }
 
-  it 'prime numbers across the top' do
-    multiplier.top_row.to eq == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+  it 'contains prime numbers across the top' do
+    expect(multiplier.top_row) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
   end
 
-  it 'prime numbers in the left column' do
-    multiplier.left_column.to eq == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+  it 'contains prime numbers in the left column' do
+    expect(multiplier.left_column) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
   end
 
   it 'knows the output' do
-    multiplier.output.to eq == [
+    expect(multiplier.output) == [
       [4, 6, 10, 14, 22, 26, 34, 38, 46, 58],
       [6, 9, 15, 21, 33, 39, 51, 57, 69, 87],
       [10, 15, 25, 35, 55, 65, 85, 95, 115, 145],
@@ -31,11 +31,11 @@ describe 'NumberMultiplierPrime' do
   describe 'printing' do
 
     it 'prints the top row' do
-      multiplier.print_top_row!.to eq == "   |  2  3   5   7  11  13  17  19  23  29"
+      expect(multiplier.print_top_row!) == "   |  2  3   5   7  11  13  17  19  23  29"
     end
 
     it 'prints a divider row of the correct length' do
-      multiplier.print_divider_row!.to eq == "------------------------------------------"
+      expect(multiplier.print_divider_row!) == "------------------------------------------"
     end
   end
 end

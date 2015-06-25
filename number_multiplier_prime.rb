@@ -49,8 +49,6 @@ class NumberMultiplierPrime
     lines.join("\n")
   end
 
-  private
-
   def primes_generator(n = 10)
     primes = []
     counter = 2
